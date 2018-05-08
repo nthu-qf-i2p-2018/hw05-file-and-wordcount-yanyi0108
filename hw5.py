@@ -27,18 +27,18 @@ def main(filename):
        
         writer.writerow(['word', 'count'])   #命名他的表頭
 
-        writer.writerows(word_counter.most_common()) #將內容列入
+        writer.writerows(word_counter.most_common()) #將內容列入，並依照出現多的排到少的
 
     # dump to a json file named "wordcount.json"
 
     import json
-    json.dump(word_counter.most_common(),open('word_count.json','w'))
+    json.dump(word_counter.most_common(),open('wordcount.json','w'))
 
     # BONUS: dump to a pickle file named "wordcount.pkl"
     # hint: dump the Counter object directly
 
     import pickle
-    pickle.dump(word_counter.most_common(),open('word_count.pkl','wb'))
+    pickle.dump(word_counter,open('wordcount.pkl','wb'))
     
     
     
