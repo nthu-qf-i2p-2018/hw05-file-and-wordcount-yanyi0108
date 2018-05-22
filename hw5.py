@@ -22,7 +22,7 @@ def main(filename):
     from collections import Counter
     word_counter = Counter(all_words)
     
-    with open('word_count.csv','w',newline='') as csv_file:
+    with open('wordcount.csv','w',newline='') as csv_file:
         writer = csv.writer(csv_file)
        
         writer.writerow(['word', 'count'])   #命名他的表頭
